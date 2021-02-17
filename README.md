@@ -1,2 +1,2 @@
-# Loja-de-cal-ados
+# Loja-de-calcados
 Tarefada disciplina de Programação
