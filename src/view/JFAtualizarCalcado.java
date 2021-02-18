@@ -158,7 +158,8 @@ public class JFAtualizarCalcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				Calcado c = new Calcado();
-				CalcadoDAO dao = new CalcadoDAO();
+				CalcadoDAO cdao = new CalcadoDAO();
+				c.setCalcadoId(cId);
 				c.setCalcadoModelo(textModelo.getText());
 				c.setCalcadoMarca(textMarca.getText());
 				c.setCalcadoPreço(Double.parseDouble(textPreço.getText()));
@@ -170,7 +171,7 @@ public class JFAtualizarCalcado extends JFrame {
 				else if (rdbtnSim.isSelected()) {
 					c.setCalcadoEstoque(true);
 				}
-				dao.create(c);
+				cdao.update(c);
 			}
 		});
 		btnAtualizar.setAction(action);

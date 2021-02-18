@@ -105,7 +105,7 @@ public class CalcadoDAO {
 		
 		
 		try {
-			stmt = con.prepareStatement("UPDATE `calcado` SET `calcadoModelo`=?,`calcadoMarca`=?,`calcadoPreço`=?,`calcadoTamanho`=?,`calcadoEstoque`=? WHERE `calcadoalcadoId`=? LIMIT 1");
+			stmt = con.prepareStatement("UPDATE `calcado` SET `calcadoModelo`=?,`calcadoMarca`=?,`calcadoPreço`=?,`calcadoTamanho`=?,`calcadoEstoque`=? WHERE `calcadoId`=? LIMIT 1");
 			stmt.setString(1, c.getCalcadoModelo());
 			stmt.setString(2, c.getCalcadoMarca());
 			stmt.setDouble(3, c.getCalcadoPreço());
